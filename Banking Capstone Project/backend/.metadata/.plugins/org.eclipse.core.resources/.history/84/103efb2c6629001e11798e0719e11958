@@ -1,0 +1,5 @@
+package com.icin.entity;
+
+public class Login {
+
+}

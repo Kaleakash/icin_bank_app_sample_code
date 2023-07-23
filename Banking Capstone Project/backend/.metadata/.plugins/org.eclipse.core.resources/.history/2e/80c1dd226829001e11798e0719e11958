@@ -1,0 +1,31 @@
+package com.icin.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.icin.entity.Login;
+import com.icin.repository.LoginRepository;
+
+@Service
+public class LoginService {
+
+	@Autowired
+	LoginRepository loginRepository;
+	
+	public String signIn(Login login) {
+		Optional<Login> result	= loginRepository.findById(login.getEmailid());
+		if(result.isPresent()) {
+			
+		}else {
+			return "InValid emailid";
+		}
+		
+	}
+	
+	public String signUp(Login login) {
+		
+		return null;
+	}
+}

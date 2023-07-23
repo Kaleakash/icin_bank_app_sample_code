@@ -1,0 +1,8 @@
+package com.icin.entity;
+
+public class Account {
+private int accno;
+private String typeofaccount;
+private String emailid;
+private float amount;
+}

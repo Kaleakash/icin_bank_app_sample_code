@@ -1,0 +1,18 @@
+package com;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@SpringBootApplication(scanBasePackages = "com")// Enable @RestController @Service @Repository 
+@EntityScan(basePackages = "com.icin.entity") // enable @Entity 
+@EnableJpaRepositories(basePackages = "com.icin.repository") // enable repository 
+public class IcinBankBackendAppApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(IcinBankBackendAppApplication.class, args);
+		System.out.println("spring boot application up!");
+	}
+
+}
