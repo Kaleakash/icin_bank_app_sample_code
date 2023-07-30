@@ -1,0 +1,19 @@
+<div>
+    <p>Employee id is {{id}} &nbsp;
+        Name is {{name}}<br/>
+        Age is {{age}}
+        Result is {{result}}
+    </p>
+    <p>Addition of two number is {{5+6}}</p>
+    <br/>
+    <input type="button" value="Click here"
+    (click)="fun()"/>
+    <input type="button" value="Change value"
+    (click)="changeName()"/>
+    <br/>
+    
+    Name :<input type="text" #nameRef/>
+    <input type="button" value="Pass Value" (click)="passValue(nameRef.value)"/>
+    <br/>
+    <p>Your name is {{msg}}</p>
+</div>
